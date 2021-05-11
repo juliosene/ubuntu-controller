@@ -1,3 +1,6 @@
+# Hostname
+sudo hostname piserverad
+# $ sudo nano /etc/hostname
 # create an auxiliar eth interface
 sudo ip link add dev dummy0 type dummy
 sudo ip link set dummy0 down
