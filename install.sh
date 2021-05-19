@@ -1,11 +1,13 @@
+#1 Edit network to create a VLAN
+# nano /etc/netplan/00-installer-config.yaml
+#2 Reboot
+#3 Install Pi-hole
+curl -sSL https://install.pi-hole.net | bash
+# Select the correct interface (VLAN) for pi hole
+#4 Set pihole web console password
+sudo pihole -a -p
 # Hostname
-sudo hostname piserverad
+# sudo hostname piserverad
 # $ sudo nano /etc/hostname
-# create an auxiliar eth interface
-sudo ip link add dev dummy0 type dummy
-sudo ip link set dummy0 down
-sudo ip link set name eth53 dev dummy0
-sudo ip addr add 198.162.3.10/32 dev eth53
-sudo ip link set eth53 up
-# install pi hole
-# install samba
+#5 install samba 4 as Active Directory
+
