@@ -1,0 +1,19 @@
+# Pi-Hole + Samba AD network configuration
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      addresses: [ "192.168.3.11/24" ]
+      gateway4: 192.168.3.1
+      nameservers:
+        addresses: [ "8.8.8.8" ]
+  vlans:
+    vlanPiHole:
+      id: 10
+      link: eth0
+      addresses: [ "192.168.3.10/24" ]
+      gateway4: 192.168.3.1
+      nameservers:
+        addresses: [ "8.8.8.8" ]
+    
